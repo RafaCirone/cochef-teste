@@ -1,0 +1,22 @@
+{
+  "name": "cochef",
+  "version": "1.0.0",
+  "description": "Cozinha de República (CoChef): estoque, lista de compras, rateio e escala de cozinhas compartilhadas",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/servidor.ts",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/servidor.ts",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.ts",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-reporter=spec \"tests/**/*.test.ts\"",
+    "test:cobertura": "node --disable-warning=ExperimentalWarning --test --test-reporter=spec --experimental-test-coverage --test-coverage-include=\"src/**\" \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": ">=5.8",
+    "@types/node": "^22"
+  }
+}
